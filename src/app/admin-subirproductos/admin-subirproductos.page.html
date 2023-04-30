@@ -1,0 +1,57 @@
+<!--HEADER-->
+<ion-header>
+  <ion-toolbar color="primary">
+<!--BOTON VOLVER A PERFIL-->
+    <ion-buttons slot="start">
+      <ion-button class="backbtn" routerLink="/perfil" routerDirection="back">
+        <i class='bx bxs-chevron-left'></i>
+      </ion-button></ion-buttons>
+<!--BOTON VOLVER A PERFIL-->
+    <ion-title>Mi Perfil</ion-title>
+  </ion-toolbar>
+</ion-header>
+<!--HEADER-->
+<ion-content color="primary" >
+  <ion-header color="primary"  >
+    <ion-toolbar color="primary">
+      <div class="ion-text-center " ><p>Subir Productos</p></div>
+<!--SECCION AGREGAR DATOS PARA ACTUALIZAR-->
+      <ion-card>
+<!--NOMBRE-->
+<ion-item>
+  <ion-label position="stacked">Codigo</ion-label>
+  <ion-input placeholder="Ingresa el Codigo"></ion-input>
+</ion-item>
+      <ion-item>
+        <ion-label position="stacked">Nombre del Producto</ion-label>
+        <ion-input placeholder="Ingresa el nombre nombre"></ion-input>
+      </ion-item>
+<!--APELLIDO-->
+      <ion-item>
+        <ion-label position="stacked">Categoria</ion-label>
+        <ion-input placeholder="Ingresa la Categoria"></ion-input>
+      </ion-item>
+<!--RUT-->
+      <ion-item>
+        <ion-label position="stacked">Precio</ion-label>
+        <ion-input placeholder="Ingresa el Precio"></ion-input>
+      </ion-item>
+<!--CORREO-->
+      <ion-item>
+        <ion-label position="stacked">Cantidad</ion-label>
+        <ion-input placeholder="Ingresa la cantidad"></ion-input>
+      </ion-item>
+<!--CELULAR-->
+      <ion-item>
+        <ion-label position="stacked">Imagen</ion-label>
+        <ion-input placeholder="Ingresael enlace de la imagen"></ion-input>
+      </ion-item>
+    </ion-card>
+<!--BOTON ACTUALIZAR DATOS-->
+    <div class="ion-text-center">
+    <ion-button  color="light" fill="solid">Actualizar Datos</ion-button>
+    </div>
+<!--SECCION AGREGAR DATOS PARA ACTUALIZAR-->
+    </ion-toolbar>
+  </ion-header>
+</ion-content>

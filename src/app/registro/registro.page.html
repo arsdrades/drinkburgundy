@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-button class="backbtn" routerLink="/inicio" routerDirection="back">
+        <i class='bx bxs-chevron-left'></i>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content color="primary">
+
+  <div style="margin-left: 25%;" >
+    <h1>Registrate</h1>
+  </div>
+
+  <form [formGroup]="formularioRegistro" (keyup.enter)="guardar()">
+    <ion-card>
+    <ion-item>
+      <ion-label position="floating">Nombre</ion-label>
+      <ion-input formControlName="nombre"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Correo</ion-label>
+      <ion-input formControlName="correo"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-input formControlName="password" type="password"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Confirmar Contraseña</ion-label>
+      <ion-input formControlName="confirmarpassword" type="password"></ion-input>
+    </ion-item></ion-card>
+  
+    <ion-button color="tertiary" expand="block" class="main-button" (click)="guardar()">Registrarse</ion-button>
+  </form>
+</ion-content>

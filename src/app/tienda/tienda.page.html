@@ -1,0 +1,121 @@
+<ion-header>
+  <ion-toolbar ion-padding color="primary">    
+    <ion-button routerLink="/login" color="tertiary" class="ion-padding-end" slot="start"><ion-icon name="person-outline"></ion-icon></ion-button> 
+    <div style="margin-left: 30%;">
+      <img height="60px" class="ion-text-center"  src="assets/img/MODIFICACION.png"/>
+    </div>
+    
+    <ion-button id="open-modal" color="primary" class="ion-padding-end" slot="end"><ion-icon   name="cart-outline"></ion-icon></ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="">
+
+  <ion-searchbar show-clear-button="focus" value="           Buscar"></ion-searchbar>
+  
+
+
+
+  <ion-grid >
+      <ion-row >
+        <ion-col size="6"  *ngFor="let product of products">
+          <div class="tarjet">
+            <img height="130px"  src={{product.imagen}}/>
+
+            <ion-label color="dark">{{product.name}}</ion-label>
+            <ion-card-subtitle class="tam">{{product.categoria}}</ion-card-subtitle>
+            <ion-card-subtitle>${{product.precio}}</ion-card-subtitle>
+            
+     
+          <ion-button fill="outline" (click)="addCart(nombre,price)" >Agregar</ion-button>
+
+        </div>
+      </ion-col>
+
+      </ion-row>
+    </ion-grid>
+
+
+
+<!--MODAL-->
+
+<ion-modal trigger="open-modal" (willDismiss)="onWillDismiss($event)">
+  <ng-template>
+    <ion-header>
+      
+      <ion-toolbar color="primary">
+        <ion-title>Mi Pedido</ion-title>
+        <ion-buttons slot="start">
+          <ion-button  routerLink="/tienda"><ion-icon name="arrow-back-outline"></ion-icon></ion-button>
+        </ion-buttons>
+        <ion-title>
+          
+        </ion-title>
+        <ion-buttons slot="end">
+          <ion-button (click)="confirm()" [strong]="true"></ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content  class="">
+      <ion-card>
+
+
+    <!--UBICACION ACTUAL-->
+      <ion-list>
+
+    <!--PRIMERA DIRECCION-->
+        <ion-item >
+          <ion-badge slot="start">1</ion-badge>
+          <img height="50px" src="assets/img/piscomalpaso.jpg"/>
+          <ion-label>
+            <h4>Pisco Mal Paso</h4>
+            <p>18.700 CLP</p>
+          </ion-label>         
+        </ion-item>
+    <!--SEGUNDA DIRECCION-->
+    <ion-item >
+      <ion-badge slot="start">1</ion-badge>
+      <img height="50px" src="assets/img/piscomalpaso.jpg"/>
+      <ion-label>
+        <h4>Pisco Mal Paso</h4>
+        <p>18.700 CLP</p>
+      </ion-label>         
+    </ion-item>
+    <!--TERCERA DIRECCION-->
+    <ion-item >
+      <ion-badge slot="start">1</ion-badge>
+      <img height="50px" src="assets/img/piscomalpaso.jpg"/>
+      <ion-label>
+        <h4>Pisco Mal Paso</h4>
+        <p>18.700 CLP</p>
+      </ion-label>         
+    </ion-item>
+    <!--CUARTA DIRECCION-->
+    <ion-item >
+      <ion-badge slot="start">1</ion-badge>
+      <img height="50px" src="assets/img/piscomalpaso.jpg"/>
+      <ion-label>
+        <h4>Pisco Mal Paso</h4>
+        <p>18.700 CLP</p>
+      </ion-label>         
+    </ion-item>
+    <!--QUINTA DIRECCION-->
+    <ion-item >
+      <ion-badge slot="start">1</ion-badge>
+      <img height="50px" src="assets/img/piscomalpaso.jpg"/>
+      <ion-label>
+        <h4>Pisco Mal Paso</h4>
+        <p>18.700 CLP</p>
+      </ion-label>         
+    </ion-item>
+      </ion-list>
+    <!--// SECCION DE DIRECCIONES-->
+    </ion-card>
+    <div class="ion-text-center">
+      <ion-button  color="primary" fill="solid">Pagar</ion-button>
+    </div>
+    </ion-content>
+
+  </ng-template>
+  
+</ion-modal>

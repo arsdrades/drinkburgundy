@@ -1,0 +1,41 @@
+<!--HEADER-->
+<ion-header>
+  <ion-toolbar ion-padding color="primary">     
+    <div style="margin-left: 25%;">
+      <img height="70px" class="ion-text-center"  src="assets/img/logo-inverted.svg"/>
+    </div>
+    <div class="ion-text-center ion-padding ">
+      <ion-label class="text-white ">Administrador</ion-label> 
+    </div>  
+  </ion-toolbar>
+</ion-header>
+<!--HEADER-->
+<!--MENU DE OPCIONES-->
+<ion-content>
+  <ion-list>
+<!--PERFIL-CUENTA-->
+    <ion-item routerLink="/perfil-cuenta">
+      <ion-icon name="person-circle-outline" color="primary" class="ion-padding-horizontal"></ion-icon>
+      <ion-label> Cuenta</ion-label>        
+    </ion-item>
+<!--PERFIL-PEDIDOS-->
+    <ion-item routerLink="/perfil-pedidos">
+      <ion-icon name="receipt" color="primary" class="ion-padding-horizontal"></ion-icon>
+      <ion-label> Subir Productos</ion-label>
+    </ion-item>
+
+<!--CERRAR SESION-->
+    <ion-item (click)="presentAlert()" routerLink="/login">
+      <ion-icon name="close-circle-outline" color="primary" class="ion-padding-horizontal"></ion-icon>
+      <ion-label> Cerrar Sesión</ion-label>
+    </ion-item>
+<!--IMAGEN-FOOTER-->
+  </ion-list>
+
+<!--IMAGEN-FOOTER-->
+</ion-content>
+<!--MENU DE OPCIONES-->
+
+  
+  
+  

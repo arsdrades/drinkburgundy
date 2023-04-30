@@ -1,0 +1,48 @@
+<!--HEADER--> 
+<ion-header>
+  <ion-toolbar ion-padding color="primary">    
+    <ion-button routerLink="/login" color="tertiary" class="ion-padding-end" slot="start"><ion-icon name="person-outline"></ion-icon></ion-button> 
+    <div style="margin-left: 30%;">
+      <img height="60px" class="ion-text-center"  src="assets/img/MODIFICACION.png"/>
+    </div>
+    
+    <ion-button id="open-modal" color="primary" class="ion-padding-end" slot="end"><ion-icon   name="cart-outline"></ion-icon></ion-button>
+  </ion-toolbar>
+</ion-header>
+<!--SECCION DE ORDENES-->
+<ion-content >
+<!--TITULO-->
+<div class="ion-padding ion-text-center " ><p>¡Estos son tus ordenes!</p></div>
+<!--TITULO-->
+<!--PRIMER PRODUCTO-->
+    <ion-content >
+      <ion-card>
+      <ion-list>
+        <ion-item id="open-modal" >
+          <ion-avatar><img src="assets/img/piscomistral.png" color="primary" ></ion-avatar> 
+          <ion-label>
+            <h4>Pisco Mistral 35° 750 ml</h4>
+            <p>Entregado - 07/10</p>
+          </ion-label>         
+      </ion-item>
+<!--SEGUNDO PRODUCTO-->
+        <ion-item id="open-modal">
+          <ion-avatar  ><img src="assets/img/piscomalpaso.jpg" color="primary" ></ion-avatar> 
+          <ion-label>
+            <h4>Pisco Mal Paso Pedro Jimenez</h4>
+            <p>Entregado - 13/10</p>
+          </ion-label>         
+        </ion-item>
+<!--TERCER PRODUCTO-->
+        <ion-item id="open-modal">
+          <ion-avatar  ><img src="assets/img/piscomistral.png" color="primary" ></ion-avatar> 
+          <ion-label>
+            <h4>Pisco Mistral 35° 750 ml</h4>
+            <p>Entregado - 07/10</p>
+          </ion-label>         
+        </ion-item>
+
+<!--FIN SECCION-->
+      </ion-list>
+    </ion-card>
+  </ion-content>
